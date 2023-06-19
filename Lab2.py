@@ -14,6 +14,7 @@ def get_user_input():
 def calc_average_temperature(numbers):
     avg = sum(numbers) / len(numbers)
     print("Average temperature: " + str(avg))
+    return avg
 
 def calc_min_max_temperature(numbers):
     min_temp = min(numbers)
@@ -22,10 +23,12 @@ def calc_min_max_temperature(numbers):
     print("Highest temperature: " + str(max_temp))
     numbers.sort()
     print(numbers)
+    return (min_temp, max_temp, numbers)
 
 def calc_median_temperature(numbers):
     median = statistics.median(numbers)
     print("The median temperature is " + str(median))
+    return median
 
 def calc_complex_median_temp(numbers):
     numbers.sort()
